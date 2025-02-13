@@ -384,7 +384,7 @@
 }
 .trickyBtn{
     position: absolute;
-    bottom: 25%;
+    bottom: 20%;
     color: white;
     background: linear-gradient(to right, #cb4464, #e11b4a);
     padding: 5px 15px;
