@@ -142,3 +142,12 @@ const clickSound = new Audio("music/yey.mp3"); // Change this to your actual fil
         });
 
    
+window.onload = function() {
+    document.getElementById("loading-screen").style.display = "none"; // Hide loading
+    document.getElementById("content").style.display = "block"; // Show content
+
+    // Now, ask for autoplay permission
+    document.addEventListener("click", () => {
+        audio.play();
+    }, { once: true });
+};
