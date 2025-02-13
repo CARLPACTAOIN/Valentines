@@ -132,7 +132,7 @@ celeb.addEventListener('click', () => {
      .then(() => jsConfetti.addConfetti({
         emojis: ['💕', '❤️', '🌹', '✨', '💫', '🌸'],
      }))
-    .then(() => alert("YEYYYYY💕. Amo lang na, sorry sa design dili ko hawd. You can refresh the page or click back button kung gusto nimo tan awon tong previous sections"))
+    .then(() => alert("Amo lang na, sorry sa design dili ko hawd. You can refresh the page or click back button kung gusto nimo tan awon tong previous sections. Happy Valentines Day :)"))
 } )
 
 const clickSound = new Audio("music/yey.mp3"); // Change this to your actual file
