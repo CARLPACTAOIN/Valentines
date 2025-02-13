@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   
+</head>
+    
+<body >
+    <div id="loading-screen">Loading pa boi huwat sa kadali, kung dugay kaayu internet na nimo AHAHAHAHHA</div>
+    <audio autoplay loop>
+        <source src="music/Mahika.mp3">
+        <source src="music/Mahikawav.wav">
+    </audio>
+    <div class="container" style="display: none;" id="content">
+        <img src="imgs/Floral1.png" class="corner bottom-left">
+        <img src="imgs/heart.png" class="corner upper-right">
+        <div class="carousel">
+            <section class="section active" id="sec1">
+                <H1 class="header">A Special Question to Someone Special...</H1> 
+                <div class="button-container">
+                    <a href="#" class="nextBtn" onclick="nextbtn()">Continue</a>
+                </div>
+            </section>
+
+            <section class="section second" id="sec2">
+                <div class="headline2">
+                    <h1>Every moment with you is amazing.❤️ </h1>
+                    <h3>Here are just a few memories I had with you.</h3>
+                </div>
+                <div class="slider-wrapper">    
+                    <div class="slider">
+                        <div class="item">
+                            <h1>Your smile makes my day.</h1>
+                            <img src="imgs/7.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>Teammates in life, partners in crime.</h1>
+                            <img src="imgs/3.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>Under the stars, beside you—perfect.</h1>
+                            <img src="imgs/4.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>Two souls, one bond, endless memories.</h1>
+                            <img src="imgs/2.png" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>Close to you is my favorite place to be.</h1>
+                            <img src="imgs/6.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>Dressed up or casual, we shine together.</h1>
+                            <img src="imgs/5.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>No words needed, just us</h1>
+                            <img src="imgs/8.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>Smiling through life, one memory at a time.</h1>
+                            <img src="imgs/1.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>To be with you means happiness.</h1>
+                            <img src="imgs/9.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>With you, every moment is special.</h1>
+                            <img src="imgs/10.png" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>You lean on me, and I’ll always be here.</h1>
+                            <img src="imgs/15.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>Your smile lights up even the darkest nights.</h1>
+                            <img src="imgs/12.png" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>The coolest duo in the room.</h1>
+                            <img src="imgs/13.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <h1>Late-night talks and instant noodles—simple joys with you.</h1>
+                            <img src="imgs/14.jpg" alt="">
+                        </div>
+                        <button id="next">></button>
+                        <button id="prev"><</button>
+                    </div>
+                </div>
+                <div class="second-button-container">
+                    <button class="second-next-button" id="prev2" onclick="prevbtn()">Back</button>
+                    <button class="second-prev-button" id="next2" onclick="nextbtn()">Continue</button>
+                </div>
+            </section>
+            <section class="section third" id="sec3">
+                
+                <div class="canvas-container">
+                    <div class="canvas-wrapper" id="canvas">
+                        <img src="imgs/canvas1.png" onclick="zoom()" alt="">
+                        <p id="backBtn" onclick="unZoom()">X</p>
+                    </div>
+                </div>
+                <div class="third-button-container">
+                    <button class="third-next-button" id="prev3" onclick="prevbtn()">Back</button>
+                    <button class="third-prev-button" id="next3" onclick="nextbtn()">Continue</button>
+                </div>
+            </section>
+            <section class="section last" id="sec4">
+                <canvas id="confetti"></canvas>
+                <div class="valentine-container">
+                    <div class="valentine-wrapper">
+                        <img src="imgs/last.png" alt="">
+                    </div>
+                </div>
+                <div class="last-button-container">
+                    <button class="last-next-button" id="prev4" onclick="prevbtn()"><- Back</button>
+                </div>
+                <div class="tricky-button-container">
+                    <button class="trickyBtn yes" id="tricky-button-yes"> YES, OF COURSE! 💖</button>
+                    <button class="trickyBtn no" id="tricky-button-no">NO (Try it)</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+</body>
+</html>

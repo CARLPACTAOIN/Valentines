@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn’t increase size */
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    transition: opacity 0.5s ease-out;
+    z-index: 9999;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full-screen background */
+    overflow: hidden;    
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    background: url('imgs/MAINBG.jpg') center/cover no-repeat;
+    
+        
+    filter: blur(6px);
+        
+    z-index: -1;
+}
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 400vw; 
+    height: 100%;
+    position: relative;
+}
+
+.section{
+    width: 100vw;
+    transition: transform 1s ease-in-out;
+    position: relative;
+}
+
+.active{
+    transform: translateX(0);
+}
+.second{
+    transform: translateX(100%);
+}
+.third{
+    transform: translateX(200%);
+}
+
+
+.header{
+    text-align: center;
+    margin-top: 18vw ;
+    font-family: 'Dancing Script', cursive;
+    color: #f57d8f;
+    font-size: 80px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, .4); 
+    font-weight: bolder;
+
+}
+.button-container {
+    text-align: center; /* Centers the buttons */
+    margin-top: 30px; /* Adds space below the text */
+}
+
+.nextBtn {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: white;
+    background: linear-gradient(to right, #ff758c, #ff7eb3); /* Soft pink gradient */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px; /* Soft rounded edges */
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    
+}
+
+/* Hover Effect */
+.nextBtn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    box-shadow: 0px 8px 15px rgba(255, 120, 150, 0.5);
+}
+
+.corner {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    opacity: 0.8; /* Slight transparency for elegance */
+}
+
+.bottom-left {
+    bottom: -5px;
+    left: -20px;
+}
+.upper-right {
+    top:10px;
+    right: 10px;
+    width: 200px ; 
+    height: 200px;
+    opacity: 0.6;
+}
+
+.headline2 h1,h3{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, .6)
+}
+
+.headline2 h1{
+    color: #FF4D6D;
+    font-size: 60px;
+    margin: 2vh;
+   text-shadow: 0 0 15px rgba(255, 77, 110, 0.921);
+}
+.headline2 h3{
+    color: #ff4d6ee4;
+    text-shadow: 0 0 15px rgba(255, 77, 110, 0.5);
+    font-size: 35px;
+}
+
+
+.slider-wrapper{
+    position: absolute;
+    top: 30px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 470px;
+    overflow: hidden;
+    padding: 10px;
+}
+.item{
+    position: absolute;
+    width: 300px;
+    height: 440px;
+    text-align: justify;
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid #FF4D6D;
+    box-shadow: 0 0 15px rgba(255, 77, 109, 0.8);
+    padding:20px ;
+    transition: 0.5s;
+    left: calc(50% -  150px);
+    
+}
+.item h1{
+    color: #eceaea;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+.item img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+}
+#next, #prev{
+    position: absolute;
+    top: 40%;
+    color: white;
+    background-color: rgba(0, 0, 0, .4);
+    border: none;
+    font-size: 70px;
+    font-family: 'monospace';
+    font-weight: bold;
+    left: 16%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#next{
+    left: unset;
+    right: 16%;
+}
+.second-button-container{
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+#next2, #prev2{
+    color: white;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    padding: 5px 15px;
+    border-radius: 25px; /* Soft rounded edges */
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    border: none;
+    margin: 5px;
+    font-family: 'Dancing Script', cursive;
+}
+#prev2{
+    padding: 5px 28px;
+}
+.second-button-container button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    box-shadow: 0px 8px 15px rgba(255, 120, 149, 0.897);
+}
+
+
+.third-button-container{
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+#next3, #prev3{
+    color: white;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    padding: 5px 15px;
+    border-radius: 25px; /* Soft rounded edges */
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    border: none;
+    margin: 5px;
+    font-family: 'Dancing Script', cursive;
+    z-index: 1;
+}
+#prev3{
+    padding: 5px 28px;
+}
+.third-button-container button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    box-shadow: 0px 8px 15px rgba(255, 120, 149, 0.897);
+}
+
+
+
+
+.canvas-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.canvas-wrapper{
+    width: 400px;
+    height: 560px;
+    margin: 8vh auto ;
+    background-color: #eceaea;
+    border-radius: 10px;
+    scale: 1;
+    transition: 0.5s;
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(255, 120, 149, 0.897);
+    
+}
+.canvas-wrapper img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    
+}
+
+#backBtn{
+    position: absolute;
+    top: 5px;
+    right: -50px;
+    z-index: 3;
+    cursor: pointer;
+    font-size: 50px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+}
+
+#prev4{
+    color: white;
+    background: linear-gradient(to right, #c52e52, #e11b4a);
+    padding: 5px 15px;
+    border-radius: 25px; /* Soft rounded edges */
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    border: none;
+    margin: 5px 3%;
+    font-family: 'Dancing Script', cursive;
+    z-index: 1;
+    padding: 5px 28px;
+}
+
+.last-button-container{
+    display: flex;
+    position: absolute;
+    top: 3%;
+    width: 100%;
+}
+
+.last-button-container button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    box-shadow: 0px 8px 15px rgba(255, 120, 149, 0.897);
+}
+
+
+
+
+
+
+
+.valentine-container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.valentine-wrapper{
+    width: 500px;
+    height: 500px;
+    margin: -8% auto;
+}
+
+.valentine-wrapper img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+.tricky-button-container{
+    height: 100%;
+    width: 100%;    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.trickyBtn{
+    position: absolute;
+    bottom: 25%;
+    color: white;
+    background: linear-gradient(to right, #cb4464, #e11b4a);
+    padding: 5px 15px;
+    border-radius: 25px; /* Soft rounded edges */
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.6);
+    
+    text-decoration: none;
+    border: none;
+    font-family: 'Dancing Script', cursive;
+    z-index: 1;
+    padding: 5px 28px;
+    margin: -20px;
+}
+
+
+.no:hover{
+    background: transparent;
+    border: white 2px solid;
+    color: white;
+}
+
+.yes:hover{
+    animation: wiggle 0.3s ease-in-out infinite;
+    scale: 1.1;
+}
+.yes{
+    left: calc(50% - 242px);
+    box-shadow: 0px 4px 15px rgba(255, 120, 149, 0.897);
+    transition: all 0.3s ease-in-out;
+    
+}
+.no{
+    right: calc(50% - 242px);
+    background: linear-gradient(to right, #a39195, #ffffff);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px 73px;;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
