@@ -148,6 +148,6 @@ window.onload = function() {
 
    const audio = new Audio("music/Mahika.mp3"); // Change this to your actual file
         // Play sound on button click
-        document.getElementById("#nextBtn").addEventListener("click", () => {
+        document.getElementById("nextBtn").addEventListener("click", () => {
            audio.play();
         });
