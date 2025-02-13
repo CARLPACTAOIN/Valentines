@@ -122,7 +122,7 @@ celeb.addEventListener('click', () => {
         emojis: ['💕', '❤️', '🌹', '✨', '💫', '🌸'],
      }) .then(() => jsConfetti.addConfetti({
         emojis: ['💕', '❤️', '🌹', '✨', '💫', '🌸'],
-     })) .then(() => alert("YEYYYYY💕, Nice ka. See youuu. Mwuaaa"))
+     })) .then(() => alert("YEYYYYY💕. Thank youu, see youuu! Mwuaaa"))
      .then(() => jsConfetti.addConfetti({
         emojis: ['💕', '❤️', '🌹', '✨', '💫', '🌸'],
      }))
@@ -132,6 +132,7 @@ celeb.addEventListener('click', () => {
      .then(() => jsConfetti.addConfetti({
         emojis: ['💕', '❤️', '🌹', '✨', '💫', '🌸'],
      }))
+    .then(() => alert("YEYYYYY💕. Amo lang na, sorry sa design dili ko hawd. You can refresh the page or click back button kung gusto nimo tan awon tong previous sections"))
 } )
 
 const clickSound = new Audio("music/yey.mp3"); // Change this to your actual file
